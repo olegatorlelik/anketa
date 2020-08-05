@@ -62,14 +62,14 @@ const name = prompt("your name?");
 const lastName = prompt("your last name?");
 const serName = prompt("your serName?");
 const age = prompt("how old are you?");
-const people = confirm("Ваш пол");
-if (people === true) {
+let people = confirm("Ваш пол");
+if (people) {
   people = "men";
 } else {
   people = "women";
 }
 
-const older = null;
+let older = null;
 
 if (age >= 65 && people === "men") {
   older = "Да я пенсионер";
