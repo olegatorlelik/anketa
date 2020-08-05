@@ -74,6 +74,8 @@ if (age >= 65 && people === "men") {
   older = "Да я пенсионер";
 } else if (age >= 55 && people === "women") {
   older = "да я пенсионерка";
+} else {
+  older = "я не пенсионер";
 }
 
 alert(
