@@ -58,17 +58,18 @@
 //   alert("I DONT KNOW YOU");
 // }
 
-let name = prompt("your name?");
-let serName = prompt("your serName?");
-let age = prompt("how old are you?");
-let people = confirm("Ваш пол");
+const name = prompt("your name?");
+const lastName = prompt("your last name?");
+const serName = prompt("your serName?");
+const age = prompt("how old are you?");
+const people = confirm("Ваш пол");
 if (people === true) {
   people = "men";
 } else {
   people = "women";
 }
 
-let older;
+const older = null;
 
 if (age >= 65 && people === "men") {
   older = "Да я пенсионер";
@@ -84,19 +85,21 @@ alert(
     " " +
     serName +
     "," +
-    "Ваш возвраст: " +
+    " " +
+    lastName +
+    "\nВаш возвраст: " +
     age +
     "," +
-    "ваш возвраст в дня" +
+    "\nваш возвраст в дня" +
     age * 365 +
     " " +
-    "Через 5 лет мне будет" +
+    "\nЧерез 5 лет мне будет" +
     (Number(age) + 5) +
-    "Ваш пол" +
+    "\nВаш пол" +
     " " +
     people +
     " " +
-    "Вы на пенсии" +
+    "\nВы на пенсии" +
     " " +
     " " +
     older
