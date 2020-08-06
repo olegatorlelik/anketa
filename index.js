@@ -1,4 +1,4 @@
-// alert("Я JavaScript");
+<h1>Исправленное, новая ветка</h1>;
 
 // let name = "Джон";
 // let admin = name;
