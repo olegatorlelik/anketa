@@ -145,7 +145,7 @@ alert(
 
 let str = prompt("int string");
 
-let arr = ["e", "y", "a", "o", "u"];
+let arr = ["я", "и", "ю", "э", "о", "а", "ы", "е", "у"];
 let counter = 0;
 for (let i = 0; i < str.length; i++) {
   for (let j = 0; j < arr.length; j++) {
