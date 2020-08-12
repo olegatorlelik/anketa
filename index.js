@@ -61,77 +61,99 @@
 //   alert("I DONT KNOW YOU");
 // }
 
-function int(obj) {
-  if (Number(obj) || !obj) {
-    while (Number(obj) || !obj) {
-      obj = prompt("your name?");
-    }
-  }
-}
-
-let name = prompt("your name?");
-int(name);
-
-const lastName = prompt("your last name?");
-int(lastName);
-const serName = prompt("your serName?");
-int(serName);
-// const age = prompt("how old are you?");
-// let people = confirm("Ваш пол");
-
-// if (people) {
-//   people = "men";
-// } else {
-//   people = "women";
-// }
-
-// let older = null;
-
-// if (age >= 65 && people === "men") {
-//   older = "Да я пенсионер";
-// } else if (age >= 55 && people === "women") {
-//   older = "да я пенсионерка";
-// } else {
-//   older = "я не пенсионер";
-// }
-
-// alert(
-//   "Ваше ФИО:" +
-//     name +
-//     " " +
-//     serName +
-//     "," +
-//     " " +
-//     lastName +
-//     "\nВаш возвраст: " +
-//     age +
-//     "," +
-//     "\nваш возвраст в дня" +
-//     age * 365 +
-//     " " +
-//     "\nЧерез 5 лет мне будет" +
-//     (Number(age) + 5) +
-//     "\nВаш пол" +
-//     " " +
-//     people +
-//     " " +
-//     "\nВы на пенсии" +
-//     " " +
-//     " " +
-//     older
-// );
-
-// let str = prompt("int string");
-
-// let arr = ["e", "y", "a", "o", "u"];
-// let counter = 0;
-// for (let i = 0; i < str.length; i++) {
-//   for (let j = 0; j < arr.length; j++) {
-//     if (str[i] === arr[j]) {
-//       counter += 1;
-//       break;
+// function int(obj) {
+//   if (Number(obj) || !obj) {
+//     while (Number(obj) || !obj) {
+//       obj = prompt("Введите коректно строку");
 //     }
 //   }
 // }
 
-// console.log(counter);
+let name = prompt("your name?");
+if (Number(name) || !name) {
+  while (Number(name) || !name) {
+    name = prompt("Введите коректно строку");
+  }
+}
+
+let lastName = prompt("your last name?");
+if (Number(lastName) || !lastName) {
+  while (Number(lastName) || !lastName) {
+    lastName = prompt("Введите коректно строку");
+  }
+}
+
+let serName = prompt("your serName?");
+if (Number(serName) || !serName) {
+  while (Number(serName) || !serName) {
+    serName = prompt("Введите коректно строку");
+  }
+}
+let age = prompt("how old are you?");
+age = Number(age);
+
+if (!age) {
+  while (!age) {
+    age = prompt("Введи правильно число");
+    age = Number(age);
+  }
+}
+
+let people = confirm("Ваш пол");
+
+if (people) {
+  people = "men";
+} else {
+  people = "women";
+}
+
+let older = null;
+
+if (age >= 65 && people === "men") {
+  older = "Да я пенсионер";
+} else if (age >= 55 && people === "women") {
+  older = "да я пенсионерка";
+} else {
+  older = "я не пенсионер";
+}
+
+alert(
+  "Ваше ФИО:" +
+    name +
+    " " +
+    serName +
+    "," +
+    " " +
+    lastName +
+    "\nВаш возвраст: " +
+    age +
+    "," +
+    "\nваш возвраст в дня" +
+    age * 365 +
+    " " +
+    "\nЧерез 5 лет мне будет" +
+    (Number(age) + 5) +
+    "\nВаш пол" +
+    " " +
+    people +
+    " " +
+    "\nВы на пенсии" +
+    " " +
+    " " +
+    older
+);
+
+let str = prompt("int string");
+
+let arr = ["e", "y", "a", "o", "u"];
+let counter = 0;
+for (let i = 0; i < str.length; i++) {
+  for (let j = 0; j < arr.length; j++) {
+    if (str[i] === arr[j]) {
+      counter += 1;
+      break;
+    }
+  }
+}
+
+console.log(counter);
