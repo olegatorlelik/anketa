@@ -1,5 +1,7 @@
-<h1>Исправленное, новая ветка</h1>;
-<h1>ЕЩЕ одна попытка</h1>;
+{
+  /* <h1>Исправленное, новая ветка</h1>;
+<h1>ЕЩЕ одна попытка</h1>; */
+}
 
 // let name = "Джон";
 // let admin = name;
@@ -105,3 +107,18 @@ alert(
     " " +
     older
 );
+
+let str = prompt("int string");
+
+let arr = ["e", "y", "a", "o", "u"];
+let counter = 0;
+for (let i = 0; i < str.length; i++) {
+  for (let j = 0; j < arr.length; j++) {
+    if (str[i] === arr[j]) {
+      counter += 1;
+      break;
+    }
+  }
+}
+
+console.log(counter);
