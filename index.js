@@ -1,5 +1,7 @@
-<h1>Исправленное, новая ветка</h1>;
-<h1>ЕЩЕ одна попытка</h1>;
+{
+  /* <h1>Исправленное, новая ветка</h1>;
+<h1>ЕЩЕ одна попытка</h1>; */
+}
 
 // let name = "Джон";
 // let admin = name;
@@ -59,11 +61,46 @@
 //   alert("I DONT KNOW YOU");
 // }
 
-const name = prompt("your name?");
-const lastName = prompt("your last name?");
-const serName = prompt("your serName?");
-const age = prompt("how old are you?");
+// function int(obj) {
+//   if (Number(obj) || !obj) {
+//     while (Number(obj) || !obj) {
+//       obj = prompt("Введите коректно строку");
+//     }
+//   }
+// }
+
+let name = prompt("your name?");
+if (Number(name) || !name) {
+  while (Number(name) || !name) {
+    name = prompt("Введите коректно строку");
+  }
+}
+
+let lastName = prompt("your last name?");
+if (Number(lastName) || !lastName) {
+  while (Number(lastName) || !lastName) {
+    lastName = prompt("Введите коректно строку");
+  }
+}
+
+let serName = prompt("your serName?");
+if (Number(serName) || !serName) {
+  while (Number(serName) || !serName) {
+    serName = prompt("Введите коректно строку");
+  }
+}
+let age = prompt("how old are you?");
+age = Number(age);
+
+if (!age) {
+  while (!age) {
+    age = prompt("Введи правильно число");
+    age = Number(age);
+  }
+}
+
 let people = confirm("Ваш пол");
+
 if (people) {
   people = "men";
 } else {
@@ -105,3 +142,18 @@ alert(
     " " +
     older
 );
+
+let str = prompt("int string");
+
+let arr = ["я", "и", "ю", "э", "о", "а", "ы", "е", "у"];
+let counter = 0;
+for (let i = 0; i < str.length; i++) {
+  for (let j = 0; j < arr.length; j++) {
+    if (str[i] === arr[j]) {
+      counter += 1;
+      break;
+    }
+  }
+}
+
+console.log(counter);
