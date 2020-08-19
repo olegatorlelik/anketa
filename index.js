@@ -1,8 +1,3 @@
-{
-  /* <h1>Исправленное, новая ветка</h1>;
-<h1>ЕЩЕ одна попытка</h1>; */
-}
-
 // let name = "Джон";
 // let admin = name;
 // alert(admin);
@@ -61,99 +56,96 @@
 //   alert("I DONT KNOW YOU");
 // }
 
-// function int(obj) {
-//   if (Number(obj) || !obj) {
-//     while (Number(obj) || !obj) {
-//       obj = prompt("Введите коректно строку");
+// let str = prompt("int string");
+
+// let arr = ["я", "и", "ю", "э", "о", "а", "ы", "е", "у"];
+// let counter = 0;
+// for (let i = 0; i < str.length; i++) {
+//   for (let j = 0; j < arr.length; j++) {
+//     if (str[i] === arr[j]) {
+//       counter += 1;
+//       break;
 //     }
 //   }
 // }
 
-let name = prompt("your name?");
-if (Number(name) || !name) {
-  while (Number(name) || !name) {
-    name = prompt("Введите коректно строку");
+// // console.log(counter);
+
+// function int(outputText) {
+//   let intString = prompt(outputText);
+
+//   if (!intString || Number(intString)) {
+//     while (!intString || Number(intString)) {
+//       intString = prompt(outputText);
+//     }
+//   }
+//   return intString;
+// }
+
+// const chechAge = (outputText) => {
+//   let age = prompt(outputText);
+//   Number(age);
+//   if (!age || !Number(age)) {
+//     while (!age || !Number(age)) {
+//       age = prompt(outputText);
+//     }
+//   }
+//   return age;
+// };
+
+// function people() {
+//   let gender = confirm("Ваш пол");
+//   if (gender) {
+//     gender = "men";
+//   } else {
+//     gender = "women";
+//   }
+//   return gender;
+// }
+
+// const checkOlder = () => {
+//   let grendPeople = null;
+//   let valueCheckAge = chechAge;
+//   if (valueCheckAge >= 65 && people() === "men") {
+//     grendPeople = "Да я пенсионер";
+//   } else if (valueCheckAge >= 55 && people() === "women") {
+//     grendPeople = "да я пенсионерка";
+//   } else {
+//     grendPeople = "я не пенсионер";
+//   }
+//   return grendPeople;
+// };
+
+// function anketa(name, lastName, serName, valueAge, valueGender, older) {
+//   alert(`Ваше ФИО: ${name} ${lastName} ${serName}
+//   Ваш возвраст ${valueAge}
+//   Ваш пол ${valueGender}
+//   Возрост через 5 лет ${Number(valueAge) + 5}
+//   Возрост в днях ${valueAge * 365}
+//   Ты на пенсии ${older}
+//   `);
+// }
+
+// anketa(
+//   int("Введите ваше имя"),
+//   int("Ваша фамилия"),
+//   int("Введите отчество"),
+//   chechAge("введи свой возвраст"),
+//   people(),
+//   checkOlder()
+// );
+
+function discrimination(a, b, c) {
+  let d = Math.pow(b, 2) - 4 * a * c;
+  let x = 0;
+  if (d > 0) {
+    x = ((-b + Math.sqrt(d)) / 2) * a;
+    x = ((-b - Math.sqrt(d)) / 2) * a;
+  } else if (d === 0) {
+    x = (-b / 2) * a;
+  } else if (d < 0) {
+    x = (b + Math.sqrt(d)) / (2 * a);
   }
+  return x;
 }
-
-let lastName = prompt("your last name?");
-if (Number(lastName) || !lastName) {
-  while (Number(lastName) || !lastName) {
-    lastName = prompt("Введите коректно строку");
-  }
-}
-
-let serName = prompt("your serName?");
-if (Number(serName) || !serName) {
-  while (Number(serName) || !serName) {
-    serName = prompt("Введите коректно строку");
-  }
-}
-let age = prompt("how old are you?");
-age = Number(age);
-
-if (!age) {
-  while (!age) {
-    age = prompt("Введи правильно число");
-    age = Number(age);
-  }
-}
-
-let people = confirm("Ваш пол");
-
-if (people) {
-  people = "men";
-} else {
-  people = "women";
-}
-
-let older = null;
-
-if (age >= 65 && people === "men") {
-  older = "Да я пенсионер";
-} else if (age >= 55 && people === "women") {
-  older = "да я пенсионерка";
-} else {
-  older = "я не пенсионер";
-}
-
-alert(
-  "Ваше ФИО:" +
-    name +
-    " " +
-    serName +
-    "," +
-    " " +
-    lastName +
-    "\nВаш возвраст: " +
-    age +
-    "," +
-    "\nваш возвраст в дня" +
-    age * 365 +
-    " " +
-    "\nЧерез 5 лет мне будет" +
-    (Number(age) + 5) +
-    "\nВаш пол" +
-    " " +
-    people +
-    " " +
-    "\nВы на пенсии" +
-    " " +
-    " " +
-    older
-);
-
-let str = prompt("int string");
-
-let arr = ["я", "и", "ю", "э", "о", "а", "ы", "е", "у"];
-let counter = 0;
-for (let i = 0; i < str.length; i++) {
-  for (let j = 0; j < arr.length; j++) {
-    if (str[i] === arr[j]) {
-      counter += 1;
-      break;
-    }
-  }
-}
-
-console.log(counter);
+console.log(discrimination(1, 10, 3));
