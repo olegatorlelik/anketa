@@ -71,69 +71,63 @@
 
 // // console.log(counter);
 
-// function int(outputText) {
-//   let intString = prompt(outputText);
+function int(outputText) {
+  let intString = prompt(outputText);
 
-//   if (!intString || Number(intString)) {
-//     while (!intString || Number(intString)) {
-//       intString = prompt(outputText);
-//     }
-//   }
-//   return intString;
-// }
+  if (!intString || Number(intString)) {
+    while (!intString || Number(intString)) {
+      intString = prompt(outputText);
+    }
+  }
+  return intString;
+}
 
-// const chechAge = (outputText) => {
-//   let age = prompt(outputText);
-//   Number(age);
-//   if (!age || !Number(age)) {
-//     while (!age || !Number(age)) {
-//       age = prompt(outputText);
-//     }
-//   }
-//   return age;
-// };
+function checkPeopleAge(outputAge) {
+  let age = prompt(outputAge);
+  Number(age);
+  let grendPeople = null;
+  if (!age || !Number(age)) {
+    while (!age || !Number(age)) {
+      age = prompt(outputAge);
+    }
+  }
+  let gender = confirm("Ваш пол");
+  if (gender) {
+    gender = "men";
+  } else {
+    gender = "women";
+  }
+  if (Number(age) >= 65 && gender === "men") {
+    grendPeople = "Да я пенсионер";
+  } else if (Number(age) >= 55 && gender === "women") {
+    grendPeople = "да я пенсионерка";
+  } else {
+    grendPeople = "я не пенсионер";
+  }
+  return { age, gender, grendPeople };
+}
 
-// function people() {
-//   let gender = confirm("Ваш пол");
-//   if (gender) {
-//     gender = "men";
-//   } else {
-//     gender = "women";
-//   }
-//   return gender;
-// }
+let check = checkPeopleAge("Введите возвраст");
+console.log(check.age);
 
-// const checkOlder = () => {
-//   let grendPeople = null;
-//   let valueCheckAge = chechAge;
-//   if (valueCheckAge >= 65 && people() === "men") {
-//     grendPeople = "Да я пенсионер";
-//   } else if (valueCheckAge >= 55 && people() === "women") {
-//     grendPeople = "да я пенсионерка";
-//   } else {
-//     grendPeople = "я не пенсионер";
-//   }
-//   return grendPeople;
-// };
+function anketa(name, lastName, serName, valueAge, valueGender, older) {
+  alert(`Ваше ФИО: ${name} ${lastName} ${serName}
+  Ваш возвраст ${valueAge}
+  Ваш пол ${valueGender}
+  Возрост через 5 лет ${Number(valueAge) + 5}
+  Возрост в днях ${valueAge * 365}
+  Ты на пенсии ${older}
+  `);
+}
 
-// function anketa(name, lastName, serName, valueAge, valueGender, older) {
-//   alert(`Ваше ФИО: ${name} ${lastName} ${serName}
-//   Ваш возвраст ${valueAge}
-//   Ваш пол ${valueGender}
-//   Возрост через 5 лет ${Number(valueAge) + 5}
-//   Возрост в днях ${valueAge * 365}
-//   Ты на пенсии ${older}
-//   `);
-// }
-
-// anketa(
-//   int("Введите ваше имя"),
-//   int("Ваша фамилия"),
-//   int("Введите отчество"),
-//   chechAge("введи свой возвраст"),
-//   people(),
-//   checkOlder()
-// );
+anketa(
+  int("Введите ваше имя"),
+  int("Ваша фамилия"),
+  int("Введите отчество"),
+  check.age,
+  check.gender,
+  check.grendPeople
+);
 
 function discrimination(a, b, c) {
   let d = Math.pow(b, 2) - 4 * a * c;
